@@ -34,32 +34,28 @@ st.set_page_config(
     }
 )
 
-# Enhanced CSS for consistent deployment
+# Simplified CSS for better compatibility
 st.markdown("""
 <style>
-    /* Force dark theme and gradient background */
+    /* Main app background */
     .stApp {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-        min-height: 100vh !important;
     }
     
-    /* Override Streamlit's default styling */
+    /* Container styling */
     .main .block-container {
         background: transparent !important;
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
+        padding-top: 1rem !important;
     }
     
     /* Header styling */
     .main-header {
         font-size: 2.5rem !important;
-        background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
+        color: white !important;
         text-align: center !important;
         margin-bottom: 1rem !important;
         font-weight: 800 !important;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
     }
     
     .sub-header {
@@ -72,12 +68,11 @@ st.markdown("""
     
     /* Chat container styling */
     .stChatMessage {
-        background: rgba(255, 255, 255, 0.95) !important;
-        border-radius: 15px !important;
-        padding: 15px !important;
-        margin: 10px 0 !important;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
-        backdrop-filter: blur(10px) !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        border-radius: 10px !important;
+        padding: 10px !important;
+        margin: 8px 0 !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
     }
     
     /* Message bubbles */
@@ -154,23 +149,12 @@ st.markdown("""
         box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
     }
     
-    /* Enhanced chat input styling for cloud deployment */
+    /* Simplified chat input styling */
     .stChatInput {
         margin-top: 20px !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        border-radius: 15px !important;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
-        backdrop-filter: blur(10px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    }
-    
-    .stChatInput > div > div > div {
-        box-shadow: none !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        height: auto !important;
-        min-height: 50px !important;
-        background: transparent !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        border-radius: 10px !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
     }
     
     .stChatInput input {
@@ -179,37 +163,25 @@ st.markdown("""
         padding: 12px 16px !important;
         font-size: 16px !important;
         color: #1e293b !important;
-        height: auto !important;
-        min-height: 50px !important;
-        border-radius: 15px !important;
     }
     
     .stChatInput input:focus {
         outline: none !important;
         box-shadow: none !important;
-        background: transparent !important;
     }
     
     .stChatInput input::placeholder {
         color: #64748b !important;
-        opacity: 0.7 !important;
     }
     
-    /* Sidebar styling for cloud deployment */
+    /* Sidebar styling */
     .css-1d391kg {
-        background: rgba(15, 23, 42, 0.95) !important;
-        backdrop-filter: blur(10px) !important;
+        background: rgba(15, 23, 42, 0.8) !important;
     }
     
-    /* Override Streamlit's default text colors */
+    /* Text colors for better contrast */
     .stText, .stMarkdown {
         color: #f8fafc !important;
-    }
-    
-    /* Ensure proper contrast for text */
-    .stMarkdown p {
-        color: #f8fafc !important;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
     }
     
     /* Responsive */
