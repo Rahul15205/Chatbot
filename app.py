@@ -149,29 +149,52 @@ st.markdown("""
         box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
     }
     
-    /* Simplified chat input styling */
+    /* Clean chat input styling */
     .stChatInput {
         margin-top: 20px !important;
-        background: rgba(255, 255, 255, 0.9) !important;
-        border-radius: 10px !important;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+    
+    .stChatInput > div > div > div {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
     }
     
     .stChatInput input {
         border: none !important;
         background: transparent !important;
-        padding: 12px 16px !important;
+        padding: 15px 20px !important;
         font-size: 16px !important;
         color: #1e293b !important;
+        border-radius: 12px !important;
+        min-height: 50px !important;
     }
     
     .stChatInput input:focus {
         outline: none !important;
         box-shadow: none !important;
+        background: transparent !important;
     }
     
     .stChatInput input::placeholder {
-        color: #64748b !important;
+        color: #94a3b8 !important;
+        font-style: italic !important;
+        opacity: 0.8 !important;
+    }
+    
+    /* Ensure proper spacing and alignment */
+    .stChatInput {
+        margin-bottom: 20px !important;
+    }
+    
+    /* Fix any potential overflow issues */
+    .stChatInput > div {
+        max-width: 100% !important;
+        width: 100% !important;
     }
     
     /* Sidebar styling */
@@ -398,7 +421,7 @@ def main():
     
     # Chat input
     if not st.session_state.conversation_ended:
-        user_input = st.chat_input("Type your message here...")
+        user_input = st.chat_input("Tell me about yourself and your experience...")
         
         if user_input:
             # Add user message to chat
