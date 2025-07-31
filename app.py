@@ -197,6 +197,30 @@ st.markdown("""
         width: 100% !important;
     }
     
+    /* Target the specific Streamlit chat input container */
+    .stChatFloatingInputContainer {
+        background: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Target the emotion cache class */
+    .st-emotion-cache-usj992 {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* Target the e1d2x3se2 class */
+    .e1d2x3se2 {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
     /* Sidebar styling */
     .css-1d391kg {
         background: rgba(15, 23, 42, 0.8) !important;
